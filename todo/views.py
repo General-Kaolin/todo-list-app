@@ -3,8 +3,9 @@ from django.views import View
 from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 
-from .models import Task, Tag
-from .forms import TaskForm, TagForm
+from todo.models import Task
+from todo.models import Tag
+from todo.forms import TaskForm
 
 
 # Task Views
