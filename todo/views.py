@@ -9,6 +9,7 @@ from .forms import TaskForm, TagForm
 # Task Views
 class TaskListView(ListView):
     model = Task
+    queryset = Task.objects.prefetch_related("tags")
     template_name = 'todo/task_list.html'
     context_object_name = 'tasks'
 
